@@ -1,13 +1,14 @@
 const sketch_area = document.querySelector(".sketch_area");
+console.log({sketch_area});
 
 let multiplier = 16; // the etch-a-sketch grid is 16 x 16;
 
 function createGrid(){
-    let block = document.createElement("div");
-    body.appendChild(block);
-    block.className.add = "block";
-    for (i=0; i <= 16; i++){    
-        document.getElementsByClassName("block").appendChild(block);
+    for (i=0; i < multiplier; i++){
+        let block = document.createElement("div");
+        block.textContent = "block";
+        block.classList.add("block");
+        sketch_area.appendChild(block);
     }
 };
 

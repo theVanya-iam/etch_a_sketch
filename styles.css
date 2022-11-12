@@ -1,9 +1,21 @@
 body{
     background-color: blanchedalmond;
     margin: 10px;
+    font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
 }
 
 .block{
-    color: aquamarine;
+    flex: 1 1 200px;
+    background-color: rgb(91, 91, 229);
+    margin: 10px;
+}
+
+.sketch_area{
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aqua;
 }
