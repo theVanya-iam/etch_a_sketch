@@ -10,13 +10,20 @@ function createGrid(){
         block.classList.add("block");
         sketch_area.appendChild(block);
     }
+    let color_selection;
+    // whatever the color user selects in the selection square;
+    let mouse_in = false;
+
+    block.addEventListener("mouseenter", () => {
+        this.style.color=color_selection;
+        mouse_in = true;
+    })
 };
 
 // 1. Fix the function that creates a grid of 16 x 16.
-//      a) can't remember how to create new element and append it to the body or the desire div
-//      b) add multiple blocks up to a certain number
-//      c) organize them in a neat grid
+//      * figure out formulaic approach to making a neatly organized square grid with even blocks
 // 2. Explore how to change color using mousemove and eventListeners
+
 // 3. Explore how to adjust size of the grid using a mouse drag and horizontal scrollbar
 // 4. Figure out how to change color of the adjustments
 // 5. Add feature that allows 3-4 modes for changing colors/shade
