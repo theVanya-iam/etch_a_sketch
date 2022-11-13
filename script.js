@@ -1,22 +1,24 @@
-const sketch_area = document.querySelector(".sketch_area");
-console.log({sketch_area});
+const grid_area = document.querySelector(".grid_area");
 
-let multiplier = 16; // the etch-a-sketch grid is 16 x 16;
+let multiplier = 20; // the etch-a-sketch grid is 16 x 16;
 
-function createGrid(){
-    for (i=0; i < multiplier; i++){
-        let block = document.createElement("div");
-        block.textContent = "block";
-        block.classList.add("block");
-        sketch_area.appendChild(block);
-    }
-    let color_selection;
+function createGrid(multiplier){
+    
+    grid_area.style.gridTemplateColumns = `repeat(${multiplier}, 1fr)`;
+    grid_area.style.gridTemplateRows = `repeat(${multiplier}, 1fr)`;
+    // the above two lines determine the formulaic approach to making a grid
+    for (i=0; i < (multiplier * multiplier); i++){
+        const grid_Element = document.createElement("div");
+        grid_Element.classList.add("grid_Element");
+        grid_area.appendChild(grid_Element);
+    }    
+    let color_selection = "#00FF00";
     // whatever the color user selects in the selection square;
     let mouse_in = false;
-
-    block.addEventListener("mouseenter", () => {
-        this.style.color=color_selection;
-        mouse_in = true;
+    document.addEventListener("click", () => {
+        if (mouse_in === true){
+            this.style.backroundColor = 'red';
+        }
     })
 };
 
@@ -32,4 +34,6 @@ function createGrid(){
 //      c) shading: every block get 10% darker when mousemove occurs
 //      d) lighting: every block get 10% brigther when mousemove occurs
 
-createGrid();
+window.onload = () => {
+    createGrid(multiplier);
+  }

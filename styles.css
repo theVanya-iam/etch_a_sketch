@@ -1,14 +1,30 @@
+:root {
+    --primary-dark: rgb(100, 19, 107);
+    --primary-light: #a31b85;
+    --secondary-dark: #df4e37b3;
+    --secondary-light: #f37c7c;
+  }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* border-box as compared to content-box is limited by the parents sizing */
+  padding: 0;
+  margin: 0;
+}
+
 body{
-    background-color: blanchedalmond;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-direction: column;
+    background-color: var(--primary-dark);
+    font-family: 'Roboto', sans-serif;
+    line-height: 2;
 }
 
 .header{
-    font-size: 30px;
-    background-color: brown;
+    font-size: 10px;
+    background-color: var(--primary-light);
+    color: var(--secondary-light);
+    box-shadow: rgba(249, 253, 0, 0.985) 0px 0px 10px;
 }
 
 .user_space{
@@ -20,22 +36,21 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    background-color: blueviolet;
+    background-color: var(--secondary-light);
 }
 
-.sketch_area{
+.grid_area{
+    display: grid;
     margin: 10px;
-    width: 1000px;
-    height: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: aqua;
+    width: 1200px;
+    height: 1200px;
+    background-color: var(--secondary-light);
 }
 
-.block{
-    flex: 180px;
-    background-color: rgb(91, 91, 229);
-    margin: 10px;
+.grid_Element{
+    background-color: var(--primary-light);
+    margin: 5px;
+    box-shadow: rgba(249, 253, 0, 0.944) 1px 1px 7px;
 }
 
 .scrollbar{
@@ -43,8 +58,9 @@ body{
 }
 
 .footer{
-    background-color: rgb(219, 219, 81);
-    font-size: 20px;
+    background-color: var(--primary-light);
+    color: var(--secondary-light);
+    font-size: 30px;
     margin-top: 50px;
     font-style: italic;
 }
