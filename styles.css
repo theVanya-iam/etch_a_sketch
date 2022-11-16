@@ -5,30 +5,33 @@
     --secondary-light: #f37c7c;
   }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  /* border-box as compared to content-box is limited by the parents sizing */
-  padding: 0;
-  margin: 0;
-}
-
 body{
     background-color: var(--primary-dark);
     font-family: 'Roboto', sans-serif;
     line-height: 2;
 }
 
+p{
+    color: black;
+    font-size: 28;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+/* top of the page */ 
 .header{
-    font-size: 10px;
+    font-size: 50px;
     background-color: var(--primary-light);
     color: var(--secondary-light);
     box-shadow: rgba(249, 253, 0, 0.985) 0px 0px 10px;
 }
 
+/* left side */
 .user_space{
     display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-top: -15px;
 }
 
 .controls{
@@ -36,14 +39,36 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 10px;
+    width: auto;
+    height: auto;
     background-color: var(--secondary-light);
 }
 
+.control{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+button{
+    width: 150px;
+    height: 40px;
+}
+
+#selectedColor{
+    background-color: #1b22a3;
+    height: 50px;
+    width: 50px;
+    margin: 30px;
+}
+
+/* right side */
 .grid_area{
     display: grid;
     margin: 10px;
-    width: 1200px;
-    height: 1200px;
+    width: 1000px;
+    height: 1000px;
     background-color: var(--secondary-light);
 }
 
@@ -54,8 +79,12 @@ body{
 }
 
 .scrollbar{
-    background-color: aquamarine;
+    background-color: rgba(120, 19, 118, 0.688);
+    
 }
+
+/*bottom of the page*/
+
 
 .footer{
     background-color: var(--primary-light);
@@ -64,3 +93,5 @@ body{
     margin-top: 50px;
     font-style: italic;
 }
+
+

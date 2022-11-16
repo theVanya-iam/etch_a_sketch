@@ -11,9 +11,11 @@ function createGrid(multiplier){
         const grid_Element = document.createElement("div");
         grid_Element.classList.add("grid_Element");
         grid_area.appendChild(grid_Element);
-    }    
+    }
+
     let color_selection = "#00FF00";
     // whatever the color user selects in the selection square;
+    
     let mouse_in = false;
     document.addEventListener("click", () => {
         if (mouse_in === true){
@@ -22,8 +24,7 @@ function createGrid(multiplier){
     })
 };
 
-// 1. Fix the function that creates a grid of 16 x 16.
-//      * figure out formulaic approach to making a neatly organized square grid with even blocks
+
 // 2. Explore how to change color using mousemove and eventListeners
 
 // 3. Explore how to adjust size of the grid using a mouse drag and horizontal scrollbar
