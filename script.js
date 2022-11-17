@@ -1,6 +1,7 @@
 const grid_area = document.querySelector(".grid_area");
 let brush_on = false;
 let size = 16;
+let color = 'black';
 
 function createGrid(size){
     grid_area.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -11,21 +12,12 @@ function createGrid(size){
         let grid_Element = document.createElement("div");
         grid_Element.classList.add("grid_Element");
         grid_area.appendChild(grid_Element);
-        grid_Element.addEventListener("mouseover", () => {
-            grid_Element.addEventListener("mousedown", () => {
-                brush_on = true;
-                grid_Element.style.backgroundColor = "blue";
-            })
-            grid_Element.addEventListener("mouseup", () => {
-                brush_on = false;
-            })
-            if (brush_on === true){
-                grid_Element.style.backgroundColor = "blue";
-            }   
+        setColor();
+        grid_Element.addEventListener("mouseover", (e) => {
+           colorDiv();
         });
     }
 };
-
 
 function updateSize(){
     let input = prompt("What will be size of the board?");
@@ -39,6 +31,23 @@ function updateSize(){
         grid_area.innerHTML = "";
         createGrid(input);
     }
+}
+
+function colorDiv(){
+    if (color == "random"){
+        event.target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+        event.target.style.backgroundColor = "black";
+    }
+}
+
+function setColor(colorChoice){
+    color = colorChoice;
+}
+
+function resetGrid(){
+    grid_area.innerHTML = "";
+    createGrid(size);
 }
 
 document.addEventListener("DOMContentLoaded", createGrid(size));

@@ -12,19 +12,24 @@
         <div class="user_space">
             <div class="controls left">
                 <div class="control">
-                    <div id="selectedColor"></div>
-                    <button></button>
-                    <p>Color</p>
+                    <div></div>
+                    <button id="selectedColor" onclick="setColor('black')"></button>
+                    <p>Black</p>
                 </div>
                 <div class="control">
-                    <div id="brightness"></div>
-                    <button></button>
-                    <p>Brightness</p>
+                    <div></div>
+                    <button id="randomColor" onclick="setColor('random')"></button>
+                    <p>Random</p>
                 </div>
                 <div class="control">
-                    <div id="shade"></div>
-                    <button id="updateBtn" onclick="updateSize()"></button>
-                    <p>Update Grid</p>
+                    <div></div>
+                    <button id="setSize" onclick="updateSize()"></button>
+                    <p>Set Size</p>
+                </div>
+                <div class="control">
+                    <div></div>
+                    <button id="resetButton" onclick="resetGrid()"></button>
+                    <p>Reset</p>
                 </div>
             </div>
             <div class="right">
