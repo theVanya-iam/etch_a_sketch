@@ -24,31 +24,33 @@ p{
     background-color: var(--primary-light);
     color: var(--secondary-light);
     box-shadow: rgba(249, 253, 0, 0.985) 0px 0px 10px;
+    height: 150px;
 }
 
 /* left side */
 .user_space{
     display: flex;
     justify-content: center;
-    margin: 20px;
-    margin-top: -15px;
+    margin-top: 100px;
 }
 
 .controls{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
-    width: auto;
+    width: 220px;
     height: auto;
     background-color: var(--secondary-light);
+    margin-right: 10px;
+    box-shadow: rgba(249, 253, 0, 0.985) 0px 0px 10px;
+    border: 3px solid black;
 }
 
 .control{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    font-size: 30px;
 }
 
 button{
@@ -61,6 +63,11 @@ button{
     height: 50px;
     width: 50px;
     margin: 30px;
+    margin-top: 120px;
+}
+
+.colorSelection{
+    background-color:#1b22a3;
 }
 
 /* right side */
@@ -70,6 +77,8 @@ button{
     width: 1000px;
     height: 1000px;
     background-color: var(--secondary-light);
+    box-shadow: rgba(249, 253, 0, 0.985) 0px 0px 10px;
+    border: 8px solid black;
 }
 
 .grid_Element{
@@ -80,6 +89,8 @@ button{
 
 .scrollbar{
     background-color: rgba(120, 19, 118, 0.688);
+    margin: 10px;
+    font-size: 30px;
     
 }
 
@@ -89,8 +100,10 @@ button{
 .footer{
     background-color: var(--primary-light);
     color: var(--secondary-light);
+    box-shadow: rgba(249, 253, 0, 0.985) 0px 0px 10px;
     font-size: 30px;
     margin-top: 50px;
+    height: 150px;
     font-style: italic;
 }
 

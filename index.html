@@ -8,35 +8,31 @@
     <link rel="stylesheet" href="/etch_a_sketch/styles.css">
 </head>
 <body>
-    
     <header class="header">This is Etch-a-sketch<header>
-    
         <div class="user_space">
-        <div class="controls left">
-            <div class="control">
-                <div id="selectedColor"></div>
-                <button></button>
-                <p>Color</p>
+            <div class="controls left">
+                <div class="control">
+                    <div id="selectedColor"></div>
+                    <button></button>
+                    <p>Color</p>
+                </div>
+                <div class="control">
+                    <div id="brightness"></div>
+                    <button></button>
+                    <p>Brightness</p>
+                </div>
+                <div class="control">
+                    <div id="shade"></div>
+                    <button id="updateBtn" onclick="updateSize()"></button>
+                    <p>Update Grid</p>
+                </div>
             </div>
-            <div class="control">
-                <div id="brightness"></div>
-                <button></button>
-                <p>Brightness</p>
-            </div>
-            <div class="control">
-                <div id="shade"></div>
-                <button></button>
-                <p>Shadow</p>
-            </div>
+            <div class="right">
+                <div id="grid" class="grid_area" ></div>
+                <div class="scrollbar" id="message"></div>
+            </div>    
         </div>
-        <div class="right">
-            <div id="grid" class="grid_area" ></div>
-            <div class="scrollbar">Scroll Bar for size</div>
-        </div>    
-    </div>
-    
     <footer class="footer">Made by Vanya in November 2022</footer>
-    
     <script src="/etch_a_sketch/script.js"></script>
 </body>
 </html>
