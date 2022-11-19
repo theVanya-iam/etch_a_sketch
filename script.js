@@ -13,8 +13,17 @@ function createGrid(size){
         grid_Element.classList.add("grid_Element");
         grid_area.appendChild(grid_Element);
         setColor();
+        grid_Element.addEventListener("mousedown", () => {
+            brush_on = true;
+            colorDiv();
+        });
+        grid_Element.addEventListener("mouseup", () => {
+            brush_on = false;
+        });
         grid_Element.addEventListener("mouseover", (e) => {
-           colorDiv();
+            if (brush_on === true){
+                colorDiv();
+            }
         });
     }
 };
