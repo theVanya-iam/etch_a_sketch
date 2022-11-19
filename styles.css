@@ -21,9 +21,11 @@ p{
 /* top of the page */ 
 .header{
     font-size: 50px;
+    text-align: center;
+    line-height: 3;
     background-color: var(--primary-light);
     color: var(--secondary-light);
-    box-shadow: rgba(249, 253, 0, 0.985) 0px 0px 10px;
+    box-shadow: 1px 1px 60px rgba(205, 177, 0, 0.99);
     height: 150px;
 }
 
@@ -31,7 +33,7 @@ p{
 .user_space{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .controls{
@@ -39,8 +41,6 @@ p{
     flex-direction: column;
     align-items: center;
     width: 220px;
-    height: 800px;
-    height: auto;
     background-color: var(--secondary-light);
     margin-right: 10px;
     border: 3px solid black;
@@ -112,10 +112,12 @@ button{
 .footer{
     background-color: var(--primary-light);
     color: var(--secondary-light);
-    box-shadow: rgba(249, 253, 0, 0.985) 0px 0px 10px;
+    box-shadow: -3px -8px 100px -7px rgba(252, 228, 0, 0.99);
     font-size: 30px;
+    text-align: center;
+    line-height: 4;
     margin-top: 50px;
-    height: 150px;
+    height: 120px;
     font-style: italic;
 }
 
