@@ -14,7 +14,6 @@ body{
 p{
     color: black;
     font-size: 28;
-    margin-bottom: 100px;
     margin-top: 10px;
 }
 
@@ -39,10 +38,10 @@ p{
 .controls{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
     width: 220px;
     background-color: var(--secondary-light);
-    margin-right: 10px;
+    margin-right: 25px;
     border: 3px solid black;
     box-shadow: rgba(249, 253, 0, 0.985) 0px 0px 10px;
 }
@@ -57,7 +56,7 @@ p{
 button{
     width: 80px;
     height: 80px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 #selectedColor{
@@ -77,18 +76,23 @@ button{
     border: 3px solid rgb(71, 69, 69);
 }
 
+/* right side */
 #setSize{
     background-color: orange;
     border: 1px solid rgb(12, 5, 12);
     box-shadow: rgba(249, 253, 0, 0.985) 1px 0px 5px;
+    color: black;
+    font-size: 28px;
+    margin: 10px;
+    width: 860px;
+    height: 50px;
 }
 
-/* right side */
 .grid_area{
     display: grid;
     margin: 10px;
-    width: 1000px;
-    height: 1000px;
+    width: 960px;
+    height: 960px;
     background-color: var(--secondary-light);
     box-shadow: rgba(249, 253, 0, 0.985) 0px 0px 10px;
     border: 8px solid black;
@@ -100,9 +104,12 @@ button{
     box-shadow: rgba(249, 253, 0, 0.944) 1px 1px 7px;
 }
 
-.scrollbar{
-    background-color: rgba(120, 19, 118, 0.688);
+.infoBar{
+    background-color: orange;
+    box-shadow: rgba(249, 253, 0, 0.985) 1px 0px 5px;
     margin: 10px;
+    text-align: center;
+    font-weight: 600;
     font-size: 30px;
     
 }

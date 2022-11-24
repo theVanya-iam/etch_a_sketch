@@ -32,11 +32,11 @@ function updateSize(){
     let input = prompt("What will be size of the board?");
     let message = document.querySelector('#message');
     if (input===""){
-        message.innerHTML = "Please provide a number";
+        message.innerHTML = "Please provide a number for size";
     } else if (input <= 0 || input > 100){
-        message.innerHTML = "Please provide a number between 1 and 100";
+        message.innerHTML = "Please provide a number between 1 and 100 for size";
     } else {
-        message.innerHTML = "Now you can play!";
+        message.innerHTML = "Now you can draw!";
         grid_area.innerHTML = "";
         createGrid(input);
     }
